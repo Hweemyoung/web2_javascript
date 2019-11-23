@@ -7,18 +7,6 @@
   <script src="colors.js"></script>
 </head>
 <body>
-  <h1><a href="index.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this);
-  ">
-  <ol>
-    <li><a href="#!html" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/html')">HTML</a></li>
-    <li><a href="#!css" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/css')">CSS</a></li>
-    <li><a href="#!js" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/js')">JS</a></li>
-  </ol>
-  <h2>WEB</h2>
-  <article>
-  </article>
   <script>
     var basedir = 'https://hweemyoung.github.io/web2_javascript/'
     function fetchContent(file){
@@ -34,5 +22,14 @@
       fetchContent(basedir + 'welcome')
     }
   </script>
+  <h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <ol id="nav">
+  </ol>
+  <h2>WEB</h2>
+  <article>
+  </article>
 </body>
 </html>
