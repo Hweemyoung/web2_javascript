@@ -12,20 +12,26 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/html')">HTML</a></li>
-    <li><a onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/css')">CSS</a></li>
-    <li><a onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/js')">JS</a></li>
+    <li><a href="#!html" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/html')">HTML</a></li>
+    <li><a href="#!css" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/css')">CSS</a></li>
+    <li><a href="#!js" onclick="fetchContent('https://hweemyoung.github.io/web2_javascript/js')">JS</a></li>
   </ol>
   <h2>WEB</h2>
   <article>
   </article>
   <script>
+    var basedir = 'https://hweemyoung.github.io/web2_javascript/'
     function fetchContent(file){
       fetch(file).then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text
         })
       })
+    }
+    if(location.hash){
+      fetchContent(basedir + location.hash.substr(2))
+    } else {
+      fetchContent(basedir + 'welcome')
     }
   </script>
 </body>
